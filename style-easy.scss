@@ -1,0 +1,96 @@
+header{
+	position: relative;
+	width: 100%;
+	background: black;
+	padding: 15px 50px 15px 50px;
+	overflow: hidden;
+}
+
+.caixa-menu{
+	display: block;
+	margin: 0 auto;
+}
+
+.imagem-logo{
+	width: 13%;
+}
+
+.menu-contato{
+	padding: 0 20px;
+	background: #778899;
+	border-radius: 4px;
+	text-align: center;
+
+}
+
+nav{
+	position: absolute;
+	top: 40%;
+	right: 15%;
+
+}
+nav li{
+	display: inline;
+}
+nav li a{
+	text-decoration: none;
+	font-size: 2em;
+	color: white;
+	margin: 0 1em;
+	transition: 0.2s;
+}
+
+nav li a:hover{
+	color:#124265;
+
+}
+.menu-contato:hover{
+	padding: 5px 25px;
+	font-size: 2.3em;
+	text-align: center; 
+}
+
+/*Propriedades do Body*/
+
+main{
+	position: relative;
+	width: 100%;
+	padding: 15px 50px 15px 50px;
+	text-align: center;
+}
+
+.primeira-caixa{
+	margin-top: 2em;
+}
+
+.titulo-principal{
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+.conteudo-beneficios{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+
+}
+
+.lista-beneficios li{
+	font-size: 1.6em;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.lista-beneficios p{
+	margin-bottom: 20px;
+	font-size: 1em;
+}
+
+.segunda-caixa{
+	margin-top: 2em;
+
+}

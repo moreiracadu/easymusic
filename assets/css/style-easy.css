@@ -1,16 +1,17 @@
 *{
-  font-family: "Poppins";
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
   body{
+
     margin: 0;
     padding: 0;
 
     display: grid;
 
     grid-template-columns: auto;
-    grid-template-rows: 150px auto auto;
+    grid-template-rows: 125px auto auto;
 
     grid-template-areas: 
     "cabecalho"
@@ -43,7 +44,6 @@ main{
 /* Header */
   header {
     width: 100%;
-    position: fixed;
     grid-area: cabecalho;
     background: black;
     border-bottom: 2px solid rgb(249, 241, 244);
@@ -59,7 +59,7 @@ main{
 }
 
 .imagem-logo {
-  width: 145px;
+  width: 120px;
 }
 
 .menu-contato {
@@ -95,7 +95,7 @@ nav li a:hover {
 .group-section{
 
   margin: 0;
-  background: url("principal.jpg");
+  background: url(images/principal.jpg);
   background-repeat: no-repeat;
   background-size:100% 100%;
   background-attachment: fixed;
@@ -151,18 +151,25 @@ nav li a:hover {
 .titulo-destaque{
   grid-area: titulo;
   
-  color: white;
+  color: black;
 
   font-size: 3rem;
   font-weight: bold;
+
+  /* -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black; */
 }
 
 .mensagem-destaque{
   grid-area: mensagem;
   
-  color:white;
+  color:black;
 
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  /* -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #FFF; */
 }
 
 
@@ -170,7 +177,6 @@ nav li a:hover {
 /* CARROSSEL  */
 
 .carrossel-section{
-
   grid-area: carrossel;
 
   margin: auto;
@@ -186,9 +192,10 @@ nav li a:hover {
 }
 
 .carrossel-caixa{
-
   height: 100%;
   width: 100%;
+  max-width: 1120px;
+  max-height: 500px;
   
   margin: auto;
   border-radius: 1rem;
@@ -198,15 +205,16 @@ nav li a:hover {
   display:flex;
   align-items: center;
   justify-content:center;
+
+  box-sizing: border-box;
 }
 
 .carrossel{
-  width: 80%;
-  height: 25vh;
+  width: 90%;
+  height: 95%;
 
   position: relative;
 }
-
 
 .carrossel img{
 
@@ -226,52 +234,71 @@ nav li a:hover {
   opacity:1;
 }
 
-/* CONTEÚDO */
-
 
 /* CURSOS */
 
 .cursos-section{
-  background-color: rgb(189, 189, 189, 0.2);
-  /* background-image:  */
+
+  background-color: #FFF;
+  border-top: 2px solid black;
+
+  background-image: url("https://p.kindpng.com/picc/s/64-648816_clip-art-dotted-pattern-monochrome-hd-png-download.png");
+}
+
+.cabecalho-cursos-section{
+  text-align: center;
+
+  padding-top: 5rem;
+}
+.cabecalho-cursos-section h3{
+
+  padding-top: 5rem;
+  width: 93%;
+  
+  margin: auto;
+
+  background-color: #FFF;
+  font-size: 6rem;
+
+  font-weight: bold;
+
 }
 
 .cursos{
+
+  background-color: #FFF;
+
+  width:93%;
+  margin: auto;
     
   display: grid;
 
-  grid-template-columns: 20% 20% 20%;
-  grid-template-rows: 25% 25%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 35% 35%;
 
   align-content: center;
-
   justify-content: center;
 
   height: 90vh;
 
-  gap: 2rem;  
+  gap: 2rem;
+
 }
 
 .descricao-curso{
-
-  display: grid;
-
-  grid-template-rows: 35px auto;
-
-  grid-template-areas: 
-  'nome'
-  'info';
-
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(107, 107, 107, 0.9);
   text-align: center;
-
+  padding-top: 0.5rem;
+  display: none;
+  cursor: pointer;
 }
 
-.nome-curso{
-  grid-area: nome;
-}
+.descricao-curso a{
+  color: white;
+  text-decoration: none;
 
-.info-curso{
-  grid-area: info;
 }
 
 .painel-cursos{
@@ -279,7 +306,7 @@ nav li a:hover {
   display: flex;
 
   justify-content:center;
-  align-items: center;
+  align-items: flex-end;
 
   color: white;
   font-size: 2rem;
@@ -287,36 +314,53 @@ nav li a:hover {
 
   border-radius: 5px;
 
-  transition: background-size 1s;
+  transition: 1s;
 
   max-width: 100%;
 
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
+  box-shadow: 8px 8px 8px rgb(107, 107, 107);
 }
 
 .painel-cursos:hover{
   background-size: 105% 105%;
+}
 
+.painel-cursos:hover > .descricao-curso{
+  display: block;
+}
+
+.descricao-curso:hover{
+  background-color: #FFF;
+}
+
+.descricao-curso:hover > a {
+  color: black;
+}
+
+.nome-curso{
+  display: block;
 }
 
 .painel-cursos.photo-sing{
-  background-image: url("https://i.pinimg.com/originals/33/8d/5c/338d5c8a69ad552a03d1b698ef9b1fc5.jpg");
+  background-image: url("https://t3.ftcdn.net/jpg/01/87/65/64/240_F_187656436_zeO2IoHcGPOqLgFOXHi6luM8hxf6I8c7.jpg");
 }
 .painel-cursos.photo-eguitar{
-  background-image: url("guitarra.jpg");
+  background-image: url("https://t4.ftcdn.net/jpg/01/16/57/57/240_F_116575794_BUK8Kjkan5lcxYIOeLARFEBpeYomxr5y.jpg");
 }
 .painel-cursos.photo-keyboard{
-  background-image: url("teclado.jpg");
+  background-image: url("https://image.freepik.com/fotos-gratis/menina-bonitinha-tocando-um-instrumento-de-teclado_8595-15893.jpg");
 }
 .painel-cursos.photo-drum{
   background-image: url("https://soumamae.com.br/wp-content/uploads/2017/06/crianca-tocando-bateria-e1537363356166.jpg");
 }
 .painel-cursos.photo-piano{
-  background-image: url("https://images.unsplash.com/photo-1519076976365-9c64dbd98317?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1341&q=80");
+  background-image: url("https://image.freepik.com/fotos-gratis/menina-de-vestido-preto-aprende-a-tocar-piano-a-crianca-toca-um-instrumento-musical_91660-368.jpg");
 }
 .painel-cursos.photo-guitar{
-  background-image: url("violao.png");
+  background-image: url("https://t4.ftcdn.net/jpg/00/88/62/69/240_F_88626943_tu0ocRTmB6OpdrkyHtmsOBh1JJiM3HNn.jpg");
 }
 
 /*Rodapé*/
@@ -345,7 +389,7 @@ footer{
   width: 40%;
 
   color: white;
-  font-size:3rem;
+  font-size:2.5rem;
 
   text-align: center;  
 }
@@ -392,11 +436,77 @@ footer{
 }
 
 .redes-sociais a[href*="easymusicschoolrj"]{
-  background-image: url(instagram.png);
+  background-image: url(images/instagram.png);
   background-size: 100%;
 }
 
 .redes-sociais a[href*="981208022"]{
-  background-image: url(whatsapp.png);
+  background-image: url(images/whatsapp.png);
   background-size: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:768px){
+  .group-section{
+    background-size: 120%;
+    height: 450px;
+  }
+
+  .carrossel-section{
+    display: none;
+  }
+
+  .menu-principal a{
+    font-size: 1.5rem;
+  }
+
+  .container{
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .destaque{
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .caixa-destaque{
+    margin-left: 2rem;
+  }
+
+  .cursos-section{
+    height: auto;
+  }
+
+  .cursos{
+    height: 2000px;
+    grid-template-columns: 100%;
+    grid-template-rows: 280px 280px 280px 280px 280px 280px;
+    gap: 1rem
+}
+}
+
+@media screen and (min-width:769px){
+  .group-section{
+    height:100vh;
+  }
+
+  .container{
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .destaque{
+    justify-content:center;
+    align-items:center;
+  }
+
+  .caixa-destaque{
+    margin-left: 0px;
+  }
+
+  .carrossel-section{
+    max-width: 600px;
+    max-height: 250px;
+  }
 }
